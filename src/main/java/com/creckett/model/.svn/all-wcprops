@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/crecketprojectdevelopment/!svn/ver/1471/trunk/CreckettServer/src/main/java/com/creckett/model
+END
+MatchStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/MatchStatus.java
+END
+TeamMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/TeamMaster.java
+END
+LiveMatchScore.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/LiveMatchScore.java
+END
+MatchMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/MatchMaster.java
+END
+UserBet.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/UserBet.java
+END
+BetState.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/BetState.java
+END
+LiveMatchCommentary.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/LiveMatchCommentary.java
+END
+UserPreference.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/UserPreference.java
+END
+AmountLeft.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/AmountLeft.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1471/trunk/CreckettServer/src/main/java/com/creckett/model/User.java
+END
+UserType.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1412/trunk/CreckettServer/src/main/java/com/creckett/model/UserType.java
+END
+MarketUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/MarketUser.java
+END
+BusinessObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/BusinessObject.java
+END
+Market.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/Market.java
+END
+ArchivedAmountLeft.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/ArchivedAmountLeft.java
+END
+Feedback.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/Feedback.java
+END
+Admin.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/Admin.java
+END
+MatchScore.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/model/MatchScore.java
+END
+UserMatchVote.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1690/trunk/CreckettServer/src/main/java/com/creckett/model/UserMatchVote.java
+END
+UserMatchAmountLeft.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1438/trunk/CreckettServer/src/main/java/com/creckett/model/UserMatchAmountLeft.java
+END

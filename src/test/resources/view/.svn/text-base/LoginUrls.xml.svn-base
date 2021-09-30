@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<authProvider name='FACEBOOK' url='https://www.facebook.com/dialog/oauth?client_id=137327796341515&amp;redirect_uri=http://localhost:8080/iBet/auth/facebookAuth.do&amp;scope=email'/>
+</root>

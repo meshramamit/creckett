@@ -1,0 +1,58 @@
+#=======================================================================#
+# 	DataSource Configuration
+#
+#=======================================================================#
+db.url=jdbc:mysql://localhost:3306/creckettlt
+db.username=root
+db.password=mysql
+db.driver_class=com.mysql.jdbc.Driver
+
+#=======================================================================#
+#	Connection Pool Settings
+#
+#=======================================================================#
+db.initial.pool.size=5
+db.acquire.increment=1
+db.max.pool.size=5
+db.min.pool.size=1
+db.idle.connection.timeout=28000
+db.preferred.test.query=SELECT 1
+
+#=======================================================================#
+#	Hibernate Configuration
+#
+#=======================================================================#
+hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+hibernate.show_sql=false
+hibernate.generate.statistics=true
+hibernate.hbm2ddl=validate
+hibernate.cache.provider.class=net.sf.ehcache.hibernate.EhCacheProvider
+
+
+date.interval=7
+market.open.time=30
+market.open.timer.time=30
+over.invalidation.time=180
+creckett.dateFormatPattern=MMM dd, yyyy
+creckett.timeFormatPattern=HH:mm a
+ball.number.for.vu.to.submit.the.bet=2
+runs.from.vu.for.remaining.balls=5
+noOfLastMatchesForBankAsset=5
+
+creckett.homePage=http://localhost:8080/creckett/flex/Main.html
+creckett.facebook.homePage=https://apps.facebook.com/creckett
+
+#=======================================================================#
+#	Facebook Integration Configuration
+#
+#=======================================================================#
+facebook.secret=f7569b1ca64261414e4c74edd6f04fc2
+facebook.clientId=314785265208441
+facebook.redirectURL=http://www.creckett.com/creckett/auth/facebookAuth.do
+facebook.application.scope=email
+facebook.user.authenticationURL=https://www.facebook.com/dialog/oauth?
+facebook.user.dataAccessURL=https://graph.facebook.com/me?access_token=
+facebook.application.authenticationURL=https://graph.facebook.com/oauth/access_token?
+facebook.user.friendlistAccessURL=https://graph.facebook.com/me/friends?access_token=
+facebook.user.friend.photoAccessURL=http://graph.facebook.com/#profile_id#/picture
+facebook.user.logout.url=https://www.facebook.com/logout.php?next=#homepage#&access_token=

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5
+END
+creckrtmp-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5/creckrtmp-web.xml
+END
+red5-common.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5/red5-common.xml
+END
+red5-core.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5/red5-core.xml
+END
+defaultContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5/defaultContext.xml
+END
+creckrtmp-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/red5/creckrtmp-context.xml
+END

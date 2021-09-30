@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<defaultCache maxElementsInMemory="500" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="matchScoreCache" maxElementsInMemory="500" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="matchCache" maxElementsInMemory="100" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="marketCache" maxElementsInMemory="100" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="userBetCache" maxElementsInMemory="500" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="betStateCache" maxElementsInMemory="500" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="amountLeftCache" maxElementsInMemory="500" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="teamCache" maxElementsInMemory="100" eternal="true"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+</ehcache>

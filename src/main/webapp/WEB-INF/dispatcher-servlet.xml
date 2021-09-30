@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="propertyPlaceholder"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders">
+			<value>false</value>
+		</property>
+		<property name="ignoreResourceNotFound">
+			<value>true</value>
+		</property>
+		<property name="locations">
+			<list>
+				<value>classpath:creckett.config</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="beanNameUrlHandlerMapping"
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+	</bean>
+
+	<bean id="freemarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/classes/freemarker/" />
+		<property name="freemarkerVariables">
+			<map>
+				<entry key="xml_escape" value-ref="fmXmlEscape" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
+
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true" />
+		<property name="prefix" value="" />
+		<property name="suffix" value=".ftl" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+	</bean>
+
+	<bean id="loginUrlsController" name="/loginUrls.do"
+		class="com.creckett.controller.LoginURLController">
+		<property name="authenticatorFactory">
+			<ref bean="authenticatorFactory" />
+		</property>
+	</bean>
+	<bean id="submitVoteController" name="/voteWhoWins.do"
+		class="com.creckett.controller.SubmitVoteController">
+		<property name="userMatchVoteDAO">
+			<ref bean="userMatchVoteDAO" />
+		</property>
+		<property name="teamDAO">
+			<ref bean="teamDAO" />
+		</property>
+		<property name="matchMasterDAO">
+			<ref bean="matchMasterDAO" />
+		</property>
+	</bean>
+	<bean id="matchVoteGlobalTrendController" name="/fetchGlobalTrend.do"
+		class="com.creckett.controller.MatchVoteGlobalTrendController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="userMatchVoteService">
+			<ref bean="userMatchVoteService" />
+		</property>
+	</bean>
+	<bean id="cricInfoLiveScoreController" name="/liveScores.do"
+		class="com.creckett.controller.CricInfoLiveScoreController">
+	</bean>
+
+	<bean id="indexController" name="/index.do"
+		class="com.creckett.controller.IndexController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+		<property name="interval" value="${date.interval}" />
+		<property name="userLogoutURL" value="${facebook.user.logout.url}" />
+		<property name="homePageUrl" value="${creckett.homePage}" />
+	</bean>
+	
+	<bean id="rtmpStatsController" name="/rtmp*Stats.do"
+		class="com.creckett.controller.RTMPStatsController">
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor" />
+		</property>
+		
+	</bean>
+	
+	<bean id="bankAssetController" name="/bankAsset.do"
+		class="com.creckett.controller.BankAssetController">
+		<property name="userMatchAmountLeftService">
+			<ref bean="userMatchAmountLeftService"/>
+		</property>
+		
+	</bean>
+
+	<bean id="homeScreenController" name="/homeScreen.do"
+		class="com.creckett.controller.HomeScreenController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+		<property name="userPreferenceService">
+			<ref bean="userPreferenceService" />
+		</property>
+		<property name="interval" value="${date.interval}" />
+	</bean>
+
+	<bean id="createMarketController" name="/createMarket.do"
+		class="com.creckett.controller.CreateMarketController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+	</bean>
+	
+	<bean id="ruleConfigController" name= "/ruleConfig.do" class ="com.creckett.controller.RuleConfigController"/>
+
+	<bean id="playMarketController" name="/playMarket.do"
+		class="com.creckett.controller.PlayMarketController">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor"/>
+		</property>
+		<property name="betResultService">
+			<ref bean="betResultService"/>
+		</property>
+		
+	</bean>
+
+	<bean id="joinMarketController" name="/joinMarket.do"
+		class="com.creckett.controller.JoinMarketController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+	</bean>
+
+	<bean id="deleteMarketController" name="/deleteMarket.do"
+		class="com.creckett.controller.DeleteMarketController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+	</bean>
+
+	<bean id="marketDetailChartController" name="/marketDetailChart.do"
+		class="com.creckett.controller.MarketDetailChartController">
+		<property name="marketDetailChartService">
+			<ref bean="marketDetailChartService" />
+		</property>
+	</bean>
+
+	<bean id="matchController" name="/*Match*.do"
+		class="com.creckett.controller.MatchController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="liveMatchScoreService">
+			<ref bean="liveMatchScoreService"/>
+		</property>
+		<property name="asyncBetResultHelper">
+			<ref bean="asyncBetResultHelper"/>
+		</property>
+		<property name="creckettLogger">
+			<ref bean="creckettLogger"/>
+		</property>
+		<property name="interval" value="${date.interval}" />
+	</bean>
+
+	<bean id="teamController" name="/*Team*.do"
+		class="com.creckett.controller.TeamController">
+		<property name="teamService">
+			<ref bean="teamService" />
+		</property>
+	</bean>
+
+	<bean id="adminController" name="/*Admin*.do"
+		class="com.creckett.controller.AdminController">
+		<property name="adminService">
+			<ref bean="adminService" />
+		</property>
+	</bean>
+
+	<bean id="facebookFriendsController" name="/loadFBFriends.do"
+		class="com.creckett.controller.FriendListController">
+	</bean>
+
+	<bean id="liveMatchScoreController" name="/*LiveMatch*.do"
+		class="com.creckett.controller.LiveMatchScoreController">
+		<property name="liveMatchScoreService">
+			<ref bean="liveMatchScoreService"/>
+		</property>
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor" />
+		</property>
+		<property name="matchService">
+		<ref bean="matchService"/>
+		</property>
+			
+	</bean>
+
+	<!-- Feedback Module -->
+	<bean id="feedbackController" name="/*Feedback.do"
+		class="com.creckett.controller.FeedbackController">
+		<property name="feedbackService">
+			<ref bean="feedbackService"/>
+		</property>
+			
+	</bean>
+
+	<bean id="UserPreferenceController" name="/*UserPreference.do"
+		class="com.creckett.controller.UserPreferenceController">
+		<property name="userPreferenceService">
+			<ref bean="userPreferenceService"/>
+		</property>
+			
+	</bean>
+	
+	<bean id="archiveController" name="/*Archived*.do"
+		class="com.creckett.controller.ArchiveController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+		<property name="archiveService">
+			<ref bean="archiveService" />
+		</property>
+		<property name="marketDetailChartService">
+			<ref bean="marketDetailChartService" />
+		</property>
+		<property name="dateUtils">
+			<ref bean="dateUtils" />
+		</property>
+	</bean>
+	
+	<bean id="betUpdateListenerForLoadTestingController" name="/betUpdateListenerForLoadTestingService.do"
+		class="com.creckett.controller.BetUpdateListenerForLoadTestingController">
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor" />
+		</property>
+	</bean>
+		
+	<bean id="marketCompletedController" name="/submitMarketWinners.do"
+		class="com.creckett.controller.MarketCompletedController">
+		<property name="matchService">
+			<ref bean="matchService" />
+		</property>
+	</bean>	
+</beans>

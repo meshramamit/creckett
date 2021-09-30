@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean name="messagingAdaptor"
+		class="com.creckett.messaging.application.rtmp.red5.CreckettMessagingAdaptor"
+		lazy-init="true">
+		<property name="codecStrategy" ref="codecStrategy"></property>
+		<property name="betUpdateListener" ref="betUpdateListener" />
+		<property name="freeMarkerCodecStrategy" ref="freeMarkerCodecStrategy"></property>
+	</bean>
+	
+	<bean name="betUpdateListener" lazy-init="true"
+		class="com.creckett.messaging.application.rtmp.red5.listener.BetUpdateListener">
+		<property name="codecStrategy" ref="codecStrategy"></property>
+		<property name="matchService" ref="matchService"></property>
+	</bean>
+</beans> 

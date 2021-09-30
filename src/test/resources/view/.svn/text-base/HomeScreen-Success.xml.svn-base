@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<result>SUCCESS</result>
+<user userId="123" emailId="amitmeshram@hotmail.com" />
+<matches>
+	<match teamOne='KKR' teamOneAlias='Kolkatta Knight Riders' teamTwo='DD' teamTwoAlias='Delhi Daredevils' overs='20' date="Mar 14, 2011" time="10:10 AM" >
+	  <market id='1,234' moderator='amitmeshram' marketStart='Market starts 1030 AM' />
+	</match>
+	<match teamOne='KKR' teamOneAlias='Kolkatta Knight Riders' teamTwo='DD' teamTwoAlias='Delhi Daredevils' overs='20' date="Mar 14, 2011" time="10:10 AM" >
+	</match>
+</matches>
+</root>

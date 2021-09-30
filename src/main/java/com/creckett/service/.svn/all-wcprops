@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/crecketprojectdevelopment/!svn/ver/1553/trunk/CreckettServer/src/main/java/com/creckett/service
+END
+UserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1610/trunk/CreckettServer/src/main/java/com/creckett/service/UserService.java
+END
+ArchiveService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/ArchiveService.java
+END
+FeedbackService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/FeedbackService.java
+END
+TeamService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/TeamService.java
+END
+AdminService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/AdminService.java
+END
+LiveMatchScoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/LiveMatchScoreService.java
+END
+MarketDetailChartService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/crecketprojectdevelopment/!svn/ver/1350/trunk/CreckettServer/src/main/java/com/creckett/service/MarketDetailChartService.java
+END
+BetResultService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1378/trunk/CreckettServer/src/main/java/com/creckett/service/BetResultService.java
+END
+UserMatchVoteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/crecketprojectdevelopment/!svn/ver/1697/trunk/CreckettServer/src/main/java/com/creckett/service/UserMatchVoteService.java
+END
+UserMatchAmountLeftService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/crecketprojectdevelopment/!svn/ver/1647/trunk/CreckettServer/src/main/java/com/creckett/service/UserMatchAmountLeftService.java
+END
+MatchService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1760/trunk/CreckettServer/src/main/java/com/creckett/service/MatchService.java
+END
+UserPreferenceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/service/UserPreferenceService.java
+END

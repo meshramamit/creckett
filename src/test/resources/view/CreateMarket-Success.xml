@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<result>SUCCESS</result>
+	<message>Market Id created successfully.</message>
+	<market id="ABCD-12" moderator="amitmeshram" marketStart="Market starts 1230 AM"/>
+</root>

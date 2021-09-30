@@ -1,0 +1,23 @@
+<root>
+	<ruleTips>
+	  <tip text="The closer your bets are to the actual runs scored, the better are your chances to win!" /> 
+	  <tip text="The bets totally depend on your judgment and analysis of the live match." /> 
+	  <tip text="Each player is assigned equal crecks while market opens." /> 
+	  <tip text="The player or players with maximum crecks at the end of match wins the market." /> 
+	  <tip text="You get +5 Bonus crecks if you exactly predict the actual runs scored." /> 
+	  <tip text="Values in blue color shows the actual runs and wickets for the live match." /> 
+	  <tip text="The best way to win is to be as close to actual runs/wickets." /> 
+	  <tip text="The players have some time before the countdown completes. Enough to predict a rational over." /> 
+	  <tip text="If a player does not wish to predict the wickets for an over, then it can be left blank. It will be counted as a safe bet." /> 
+	  <tip text="A “Safe Bet” is represented as “S”" /> 
+	  <tip text="If a player did not enter the bet in time, it will be counted as a “Missed Bet”. For every “Missed Bet” the player loses 10 crecks." /> 
+	  <tip text="Missed bet will be signified as “M” and will be shown in the bet column." /> 
+	  <tip text="The game will be gratifying and unpredictable if the bets are placed independently without any interaction among the players." /> 
+	  <tip text="The players can check their Archives to account for the earlier played matches." /> 
+	  <tip text="Each game can only accommodate a maximum of 5 players." />
+  </ruleTips>
+	<creckNews>
+		<news text="This is a beta release and might have some bugs. Please post your bugs in feedback section."/>
+		<news text="Please like us on Facebook (bottom of this page)"/>
+	</creckNews>
+</root>

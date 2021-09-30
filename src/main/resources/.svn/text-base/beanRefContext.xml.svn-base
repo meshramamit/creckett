@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean name="default.context"
+		class="org.springframework.context.support.ClassPathXmlApplicationContext">
+		<constructor-arg>
+			<list>
+				<value>red5/defaultContext.xml</value>
+				<value>red5/red5-common.xml</value>
+				<value>red5/red5-core.xml</value>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans> 

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/core/codec
+END
+CodecStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/core/codec/CodecStrategy.java
+END
+FreeMarkerCodecStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/core/codec/FreeMarkerCodecStrategy.java
+END
+XstreamCodecStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/core/codec/XstreamCodecStrategy.java
+END

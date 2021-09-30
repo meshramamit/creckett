@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/model/builder
+END
+MatchMasterBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/model/builder/MatchMasterBuilder.java
+END
+UserBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/model/builder/UserBuilder.java
+END
+MarketBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/model/builder/MarketBuilder.java
+END

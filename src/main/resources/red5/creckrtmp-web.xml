@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+<import resource="creckrtmp-context.xml"/>
+    
+    <bean id="web.context" class="org.red5.server.Context" 
+        autowire="byType" />
+    
+    <bean id="web.scope" class="org.red5.server.WebScope"
+         init-method="register">
+        <property name="server" ref="red5.server" />
+        <property name="parent" ref="global.scope" />
+        <property name="context" ref="web.context" />
+        <property name="handler" ref="messagingAdaptor" />        
+        <property name="contextPath" value="/creckrtmp" />
+        <property name="virtualHosts" value="*,localhost, localhost:1935, localhost:8080, 127.0.0.1:8080" />
+    </bean>
+        
+</beans>

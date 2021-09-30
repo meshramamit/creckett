@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/freemarker
+END
+ArchivedMatchList.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/ArchivedMatchList.ftl
+END
+rtmpStats.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/freemarker/rtmpStats.ftl
+END
+MarketMatchChartDetail.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/MarketMatchChartDetail.ftl
+END
+DeleteMarketScreen.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1720/trunk/CreckettServer/src/main/resources/freemarker/DeleteMarketScreen.ftl
+END
+Index.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/Index.ftl
+END
+liveMatchScore.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/liveMatchScore.ftl
+END
+cricInfoLiveScore.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1601/trunk/CreckettServer/src/main/resources/freemarker/cricInfoLiveScore.ftl
+END
+matchVoteGlobalTrend.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/crecketprojectdevelopment/!svn/ver/1694/trunk/CreckettServer/src/main/resources/freemarker/matchVoteGlobalTrend.ftl
+END
+logout.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/logout.ftl
+END
+ArchivedBetData.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/ArchivedBetData.ftl
+END
+createTeam.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/createTeam.ftl
+END
+scoreStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/scoreStatus.ftl
+END
+genericStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/genericStatus.ftl
+END
+feedbackList.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/feedbackList.ftl
+END
+createMatch.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/createMatch.ftl
+END
+PollingResponse.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/PollingResponse.ftl
+END
+loadMatches.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/loadMatches.ftl
+END
+teamGenericStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/teamGenericStatus.ftl
+END
+header.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/header.ftl
+END
+loadMatchScore.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/loadMatchScore.ftl
+END
+RuleConfig.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/RuleConfig.ftl
+END
+matchGenericStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/matchGenericStatus.ftl
+END
+ArchivedBetMarketStatistics.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/ArchivedBetMarketStatistics.ftl
+END
+JoinMarketScreen.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/crecketprojectdevelopment/!svn/ver/1720/trunk/CreckettServer/src/main/resources/freemarker/JoinMarketScreen.ftl
+END
+JoinMarketMessage.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1720/trunk/CreckettServer/src/main/resources/freemarker/JoinMarketMessage.ftl
+END
+loadTeams.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/loadTeams.ftl
+END
+MarketCreatedScreen.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1720/trunk/CreckettServer/src/main/resources/freemarker/MarketCreatedScreen.ftl
+END
+userPreference.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/userPreference.ftl
+END
+LoginUrls.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/LoginUrls.ftl
+END
+rtmpConnectionStats.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/freemarker/rtmpConnectionStats.ftl
+END
+rtmpRSOStats.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/freemarker/rtmpRSOStats.ftl
+END
+FriendsListScreen.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/FriendsListScreen.ftl
+END
+feedbackStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/freemarker/feedbackStatus.ftl
+END
+BetResultResponse.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1365/trunk/CreckettServer/src/main/resources/freemarker/BetResultResponse.ftl
+END
+HomeScreen.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1720/trunk/CreckettServer/src/main/resources/freemarker/HomeScreen.ftl
+END
+bankAssetResponse.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1629/trunk/CreckettServer/src/main/resources/freemarker/bankAssetResponse.ftl
+END

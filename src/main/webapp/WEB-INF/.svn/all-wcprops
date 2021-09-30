@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/crecketprojectdevelopment/!svn/ver/1736/trunk/CreckettServer/src/main/webapp/WEB-INF
+END
+authHandler-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/webapp/WEB-INF/authHandler-servlet.xml
+END
+dispatcher-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/crecketprojectdevelopment/!svn/ver/1722/trunk/CreckettServer/src/main/webapp/WEB-INF/dispatcher-servlet.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/crecketprojectdevelopment/!svn/ver/1736/trunk/CreckettServer/src/main/webapp/WEB-INF/web.xml
+END

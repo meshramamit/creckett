@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1557/trunk/CreckettServer/src/main/java/com/creckett/messaging/application/rtmp/red5
+END
+RTMPConnectionStatsSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/java/com/creckett/messaging/application/rtmp/red5/RTMPConnectionStatsSummary.java
+END
+RTMPStatsSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/java/com/creckett/messaging/application/rtmp/red5/RTMPStatsSummary.java
+END
+RTMPRSOStat.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/java/com/creckett/messaging/application/rtmp/red5/RTMPRSOStat.java
+END
+CreckettMessagingAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/crecketprojectdevelopment/!svn/ver/1557/trunk/CreckettServer/src/main/java/com/creckett/messaging/application/rtmp/red5/CreckettMessagingAdaptor.java
+END

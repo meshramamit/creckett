@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/crecketprojectdevelopment/!svn/ver/1537/trunk/CreckettServer/src/main/java/com/creckett/dao/impl
+END
+UserMatchVoteDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1690/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/UserMatchVoteDAOImpl.java
+END
+UserMatchAmountLeftDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/crecketprojectdevelopment/!svn/ver/1623/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/UserMatchAmountLeftDAOImpl.java
+END
+MatchMasterDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/MatchMasterDAOImpl.java
+END
+LiveMatchScoreDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/LiveMatchScoreDAOImpl.java
+END
+UserBetDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/crecketprojectdevelopment/!svn/ver/1366/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/UserBetDAOImpl.java
+END
+BaseHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1357/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/BaseHibernateDAO.java
+END
+BetStateDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1357/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/BetStateDAOImpl.java
+END
+UserPreferenceDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/UserPreferenceDAOImpl.java
+END
+UserDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1612/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/UserDAOImpl.java
+END
+AmountLeftDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1671/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/AmountLeftDAOImpl.java
+END
+ArchiveDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/ArchiveDAOImpl.java
+END
+MarketDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/crecketprojectdevelopment/!svn/ver/1760/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/MarketDAOImpl.java
+END
+FeedbackDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/FeedbackDAOImpl.java
+END
+ArchivedAmountLeftDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/ArchivedAmountLeftDAOImpl.java
+END
+TeamDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/TeamDAOImpl.java
+END
+MatchScoreDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/MatchScoreDAOImpl.java
+END
+MarketDetailChartDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/crecketprojectdevelopment/!svn/ver/1350/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/MarketDetailChartDAOImpl.java
+END
+AdminDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/dao/impl/AdminDAOImpl.java
+END

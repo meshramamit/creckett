@@ -1,0 +1,6 @@
+ALTER TABLE `user` ADD COLUMN `USER_TYPE` varchar(20) NOT NULL DEFAULT 'normal_user';
+
+INSERT INTO `user` (`ID`, `CREATED_DATE`, `UPDATED_DATE`, `EMAIL_ID`, `NAME`, `PLAYING`, `PROFILE_ID`, `MARKET_ID`,`user_type`)
+VALUES (-1,now(),now(),'creckett@creckett.com', 'creckett',true,'-1',NULL,'virtual_user`');
+
+alter table creckett.user add LOGIN_COUNT bigint(20);

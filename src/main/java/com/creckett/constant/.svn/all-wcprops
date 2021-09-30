@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/crecketprojectdevelopment/!svn/ver/1412/trunk/CreckettServer/src/main/java/com/creckett/constant
+END
+MatchSession.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/constant/MatchSession.java
+END
+SessionAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1409/trunk/CreckettServer/src/main/java/com/creckett/constant/SessionAttributes.java
+END
+AuthProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/constant/AuthProvider.java
+END
+RequestParameters.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/constant/RequestParameters.java
+END
+CreckettConstant.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1412/trunk/CreckettServer/src/main/java/com/creckett/constant/CreckettConstant.java
+END

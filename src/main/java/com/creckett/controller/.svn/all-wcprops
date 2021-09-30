@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1546/trunk/CreckettServer/src/main/java/com/creckett/controller
+END
+LoginURLController.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/LoginURLController.java
+END
+MatchController.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1722/trunk/CreckettServer/src/main/java/com/creckett/controller/MatchController.java
+END
+RuleConfigController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/RuleConfigController.java
+END
+SubmitVoteController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1696/trunk/CreckettServer/src/main/java/com/creckett/controller/SubmitVoteController.java
+END
+RTMPStatsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/java/com/creckett/controller/RTMPStatsController.java
+END
+JoinMarketController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/JoinMarketController.java
+END
+FriendListController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/FriendListController.java
+END
+DeleteMarketController.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/DeleteMarketController.java
+END
+CreateMarketController.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/crecketprojectdevelopment/!svn/ver/1760/trunk/CreckettServer/src/main/java/com/creckett/controller/CreateMarketController.java
+END
+IndexController.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/IndexController.java
+END
+MatchVoteGlobalTrendController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/crecketprojectdevelopment/!svn/ver/1698/trunk/CreckettServer/src/main/java/com/creckett/controller/MatchVoteGlobalTrendController.java
+END
+CricInfoLiveScoreController.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/crecketprojectdevelopment/!svn/ver/1601/trunk/CreckettServer/src/main/java/com/creckett/controller/CricInfoLiveScoreController.java
+END
+LiveMatchScoreController.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/crecketprojectdevelopment/!svn/ver/1412/trunk/CreckettServer/src/main/java/com/creckett/controller/LiveMatchScoreController.java
+END
+PlayMarketController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1590/trunk/CreckettServer/src/main/java/com/creckett/controller/PlayMarketController.java
+END
+BankAssetController.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/crecketprojectdevelopment/!svn/ver/1648/trunk/CreckettServer/src/main/java/com/creckett/controller/BankAssetController.java
+END
+UserPreferenceController.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/UserPreferenceController.java
+END
+MarketCompletedController.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/MarketCompletedController.java
+END
+ArchiveController.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/ArchiveController.java
+END
+FeedbackController.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/FeedbackController.java
+END
+TeamController.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/TeamController.java
+END
+MarketDetailChartController.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/MarketDetailChartController.java
+END
+HomeScreenController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1410/trunk/CreckettServer/src/main/java/com/creckett/controller/HomeScreenController.java
+END
+AdminController.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/java/com/creckett/controller/AdminController.java
+END
+BetUpdateListenerForLoadTestingController.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/crecketprojectdevelopment/!svn/ver/1350/trunk/CreckettServer/src/main/java/com/creckett/controller/BetUpdateListenerForLoadTestingController.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/crecketprojectdevelopment/!svn/ver/1555/trunk/CreckettServer/src/main/resources
+END
+rulesConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/crecketprojectdevelopment/!svn/ver/1691/trunk/CreckettServer/src/main/resources/rulesConfig.xml
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/crecketprojectdevelopment/!svn/ver/1588/trunk/CreckettServer/src/main/resources/logback.xml
+END
+beanRefContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/beanRefContext.xml
+END
+creckett.config
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/creckett.config
+END
+red5.properties
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/crecketprojectdevelopment/!svn/ver/1390/trunk/CreckettServer/src/main/resources/red5.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/log4j.xml
+END

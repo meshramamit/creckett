@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/test/java/com/creckett
+END
+BaseSimpleTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/BaseSimpleTestCase.java
+END
+BaseTransactionalTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/test/java/com/creckett/BaseTransactionalTestCase.java
+END

@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/webapp/WEB-INF/lib
+END
+mysql-connector-java-5.1.13-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar
+END
+jaudiotagger-1.0.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jaudiotagger-1.0.8.jar
+END
+acegi-security-1.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/acegi-security-1.0.4.jar
+END
+saaj-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/saaj-1.2.jar
+END
+hsqldb-1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/hsqldb-1.8.jar
+END
+ant-launcher.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/ant-launcher.jar
+END
+ant-1.8.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/ant-1.8.0.jar
+END
+jms-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jms-1.1.jar
+END
+rmissl-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/rmissl-.jar
+END
+sax-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/sax-1.0.jar
+END
+js-1.6R7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/js-1.6R7.jar
+END
+naming-factory-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/naming-factory-.jar
+END
+jmxtools-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jmxtools-.jar
+END
+js-engine-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/js-engine-.jar
+END
+naming-resources-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/naming-resources-.jar
+END
+bsh-2.0b4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/bsh-2.0b4.jar
+END
+boot.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/boot.jar
+END
+tomcat-juli-slf4j-1.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/tomcat-juli-slf4j-1.5.0.jar
+END
+maven-ant-tasks-2.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/maven-ant-tasks-2.1.3.jar
+END
+jul-to-slf4j-1.5.10.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jul-to-slf4j-1.5.10.jar
+END
+logback-classic-0.9.18.jar
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/logback-classic-0.9.18.jar
+END
+jsr173_1.0_api-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jsr173_1.0_api-.jar
+END
+rowset.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/rowset.jar
+END
+logback-core-0.9.18.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/logback-core-0.9.18.jar
+END
+jaxrpc-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jaxrpc-1.1.jar
+END
+jmxremote-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jmxremote-.jar
+END
+bcprov-jdk15on-1.47.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/bcprov-jdk15on-1.47.jar
+END
+quartz-1.6.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/quartz-1.6.5.jar
+END
+jpda-.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jpda-.jar
+END
+jsr-223-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/jsr-223-1.0.jar
+END
+red5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/red5.jar
+END
+groovy-all-1.7.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/webapp/WEB-INF/lib/groovy-all-1.7.5.jar
+END

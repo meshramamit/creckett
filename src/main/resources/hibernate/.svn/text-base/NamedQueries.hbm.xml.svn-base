@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<query name="getMarketsByMatchIdAndUserId">
+		select market from Market as market left join
+		market.marketUsers marketUser WHERE
+		market.match.id = :matchId and
+		marketUser.userId.id = :moderatorId
+	</query>
+
+	<query name="getAmountLeftByOver">
+		select amountLeft FROM AmountLeft as amountLeft
+		WHERE
+		amountLeft.marketId.id = :currentMarketId AND
+		amountLeft.matchId.id =
+		:currentMatchId
+	</query>
+	
+	<query name="getAmountLeftByMatch">
+		select amountLeft FROM AmountLeft as amountLeft
+		WHERE
+		amountLeft.matchId.id =
+		:currentMatchId
+	</query>
+
+	<query name="getLatestInvalidatedOver">
+		select match from MatchScore as match
+		where
+		match.matchId.id = :matchId and match.invalidate = (1)
+		Order by
+		match.timestamp desc
+	</query>
+
+	<query name="getLatestScore">
+		select match from MatchScore as match
+		where
+		match.matchId.id = :matchId and match.score != null
+		Order by
+		match.timestamp desc
+	</query>
+
+	<query name="getMatchScoreForOver">
+		select match from MatchScore as match
+		where matchId.id
+		= :id
+		and sessionId = :session and matchOver = :over
+	</query>
+
+	<query name="getMatchScoreBetweenOvers">
+		select match from MatchScore as match
+		where matchId.id
+		= :id and
+		sessionId = :session and matchOver between :minOver and
+		:maxOver
+	</query>
+
+	<query name="getUserBetStatus">
+		select 1 from UserBet bet where bet.market.id =
+		:marketId and bet.user.id =
+		:userId and bet.matchSession = :sessionId
+		and bet.matchOver = :overId
+	</query>
+
+	<query name="getLatestAmountLeftForUser">
+		select amount from AmountLeft as amount where
+		amount.userId.id =
+		:userId and amount.marketId.id = :marketId and
+		amount.matchId.id =
+		:matchId group by amount.marketId.id,
+		amount.matchId.id, amount.sessionId,
+		amount.over
+		having amount.sessionId
+		= max(amount.sessionId) and amount.over =
+		max(amount.over)
+	</query>
+
+	<query name="getUserBetForMarketUserMatchOver">
+		select bet from BetState as bet
+		where matchOver =
+		:over and session = :session and
+		user.id = :userId and market.id =
+		:marketId
+	</query>
+	
+	<query name="getUserBetForMatchOver">
+		select bet from BetState as bet
+		where matchOver =
+		:over and session = :session and
+		market.match.id =
+		:matchId
+	</query>
+
+	<query name="getUserBetForMarketMatchOver">
+		<![CDATA[
+		select bet from BetState as bet
+		where matchOver = :over and session = :session
+		and market.id = :marketId
+		]]>
+	</query>
+
+	<query name="getUserBetForMarket">
+		select bet from BetState as bet
+		where market.id =
+		:marketId
+	</query>
+
+</hibernate-mapping>

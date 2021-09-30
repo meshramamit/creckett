@@ -1,0 +1,9 @@
+<ruleConfig>
+        <missed_bet_penalty>-10</missed_bet_penalty>
+		<wkt_bonus>10</wkt_bonus>
+        <runs_definition>
+                <def delta="0" bonus="10"/>
+		        <def delta="1" bonus="5"/>
+				<def delta="2" bonus="0" />
+        </runs_definition>
+</ruleConfig>

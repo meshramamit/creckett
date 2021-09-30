@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<matches>
+	<match matchId="1" matchName="matchName1" matchString="TeamOne Vs TeamTwo"  date="Mar 14, 2011" time="10:10 AM" />
+	<match matchId="1" matchName="matchName1" matchString="TeamOne Vs TeamTwo"  date="Mar 14, 2011" time="10:10 AM" />
+	<match matchId="1" matchName="matchName1" matchString="TeamOne Vs TeamTwo"  date="Mar 14, 2011" time="10:10 AM" />
+</matches>
+</root>

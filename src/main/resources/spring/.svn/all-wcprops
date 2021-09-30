@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/crecketprojectdevelopment/!svn/ver/1552/trunk/CreckettServer/src/main/resources/spring
+END
+applicationContext-datasource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/spring/applicationContext-datasource.xml
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/crecketprojectdevelopment/!svn/ver/1294/trunk/CreckettServer/src/main/resources/spring/ehcache.xml
+END
+applicationContext-loadtesting.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/crecketprojectdevelopment/!svn/ver/1412/trunk/CreckettServer/src/main/resources/spring/applicationContext-loadtesting.xml
+END
+creckett-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/crecketprojectdevelopment/!svn/ver/1534/trunk/CreckettServer/src/main/resources/spring/creckett-config.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/crecketprojectdevelopment/!svn/ver/1697/trunk/CreckettServer/src/main/resources/spring/applicationContext.xml
+END

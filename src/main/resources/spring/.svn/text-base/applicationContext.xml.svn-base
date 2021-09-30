@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ehcache="http://www.springmodules.org/schema/ehcache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+                        http://www.springmodules.org/schema/ehcache http://www.springmodules.org/schema/cache/springmodules-ehcache.xsd 					
+				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+<!--	<ehcache:config configLocation="classpath:spring/ehcache.xml" />-->
+
+	
+	
+	<task:annotation-driven executor="myExecutor"
+		scheduler="myScheduler" />
+	<task:executor id="myExecutor" pool-size="5" />
+	<task:scheduler id="myScheduler" pool-size="10" />
+	
+	<bean id="hibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.generate_statistics">${hibernate.generate.statistics}
+				</prop>
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider.class}
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl}</prop>
+				<prop key="hibernate.jdbc.batch_size">10</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="namingStrategy" class="com.creckett.config.DatabaseNamingStrategy" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties" ref="hibernateProperties" />
+		<property name="namingStrategy" ref="namingStrategy" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.creckett.model.MatchMaster
+				</value>
+				<value>com.creckett.model.User</value>
+				<value>com.creckett.model.Market</value>
+				<value>com.creckett.model.MarketUser
+				</value>
+				<value>com.creckett.model.MatchScore
+				</value>
+				<value>com.creckett.model.AmountLeft
+				</value>
+				<value>com.creckett.model.TeamMaster
+				</value>
+				<value>com.creckett.model.Admin</value>
+				<value>com.creckett.model.BetState</value>
+				<value>com.creckett.model.UserBet</value>
+				<value>com.creckett.model.Feedback</value>
+				<value>com.creckett.model.UserPreference</value>
+				<value>com.creckett.model.ArchivedAmountLeft</value>
+				<value>com.creckett.model.UserMatchAmountLeft</value>
+				<value>com.creckett.model.UserMatchVote</value>
+			</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>hibernate/NamedQueries.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="authenticatorFactory" class="com.creckett.auth.AuthenticatorFactory">
+		<property name="authenticators">
+			<map>
+				<entry key="FACEBOOK">
+					<ref bean="facebookAuthenticator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="facebookAuthenticator" class="com.creckett.auth.FacebookAuthenticator">
+		<property name="secret" value="${facebook.secret}"></property>
+		<property name="clientId" value="${facebook.clientId}"></property>
+		<property name="redirectURL" value="${facebook.redirectURL}"></property>
+		<property name="scope" value="${facebook.application.scope}"></property>
+		<property name="userAuthenticatonURL" value="${facebook.user.authenticationURL}"></property>
+		<property name="userDataAccessURL" value="${facebook.user.dataAccessURL}"></property>
+		<property name="applicationAuthenticationURL" value="${facebook.application.authenticationURL}"></property>
+		<property name="userFriendListURL" value="${facebook.user.friendlistAccessURL}"></property>
+		<property name="userFriendProfilePhotoURL" value="${facebook.user.friend.photoAccessURL}"></property>
+	</bean>
+	<!-- Transaction Manager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="txInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_SUPPORTS,readOnly
+				</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="beanNameAutoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>txInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames" value="*Service" />
+	</bean>
+
+	<bean id="dateUtils" class="com.creckett.util.DateUtils">
+		<property name="dateFormatPattern" value="${creckett.dateFormatPattern}"></property>
+		<property name="timeFormatPattern" value="${creckett.timeFormatPattern}"></property>
+		<property name="marketOpenTime" value="${market.open.time}"></property>
+		<property name="marketOpenTimerTime" value="${market.open.timer.time}"></property>
+	</bean>
+
+
+	<bean id="matchService" class="com.creckett.service.impl.MatchServiceImpl">
+		<property name="matchMasterDAO">
+			<ref bean="matchMasterDAO" />
+		</property>
+		<property name="MarketDetailChartDAO">
+			<ref bean="marketDetailChartDAO" />
+		</property>
+		<property name="userMatchAmountLeftDao">
+			<ref bean="userMatchAmountLeftDAO" />
+		</property>
+		<property name="marketDAO">
+			<ref bean="marketDAO" />
+		</property>
+		<property name="teamDAO">
+			<ref bean="teamDAO" />
+		</property>
+		<property name="matchScoreDAO">
+			<ref bean="matchScoreDAO" />
+		</property>
+		<property name="userBetDAO">
+			<ref bean="userBetDAO" />
+		</property>
+		<property name="betStateDAO">
+			<ref bean="betStateDAO" />
+		</property>
+		<property name="amountLeftDAO">
+			<ref bean="amountLeftDAO" />
+		</property>
+		<property name="archivedAmountLeftDAO">
+			<ref bean="archivedAmountLeftDAO" />
+		</property>
+		<property name="userDAO">
+			<ref bean="userDAO" />
+		</property>
+		<property name="betResultCalculationStrategy">
+			<ref bean="betResultCalculationStrategy"/>
+		</property>
+		<property name="virtualUserBetSubmissionStrategy">
+			<ref bean="virtualUserBetSubmissionStrategy"/>
+		</property>
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor"/>
+		</property>
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="leftAmount" value="200" />
+	</bean>
+	
+	<bean id="betResultCalculationStrategy" class="com.creckett.core.betresult.DefaultBetResultCalculationStrategy">
+		<property name="codecStrategy">
+			<ref bean="codecStrategy"/> 
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="userBetDAO" refId="userBetDAOTarget">-->
+<!--		<ehcache:caching cacheName="userBetCache" methodName="get" />-->
+<!--		<ehcache:caching cacheName="userBetCache" methodName="getAllUserBetsForMarket" />-->
+<!--		<ehcache:flushing cacheNames="userBetCache"-->
+<!--			methodName="save" when="after" />-->
+<!--		<ehcache:flushing cacheNames="userBetCache"-->
+<!--			methodName="delete" when="after" />-->
+<!--		<ehcache:flushing cacheNames="userBetCache"-->
+<!--			methodName="update" when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="userBetDAO" class="com.creckett.dao.impl.UserBetDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="betStateDAO" refId="betStateDAOTarget">-->
+<!--		<ehcache:caching cacheName="betStateCache" methodName="get" />-->
+<!--		<ehcache:caching cacheName="betStateCache" methodName="retrieveBetStatusForOvers" />-->
+<!--		<ehcache:flushing cacheNames="betStateCache"-->
+<!--			methodName="save" when="after" />-->
+<!--		<ehcache:flushing cacheNames="betStateCache"-->
+<!--			methodName="delete" when="after" />-->
+<!--		<ehcache:flushing cacheNames="betStateCache"-->
+<!--			methodName="update" when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="betStateDAO" class="com.creckett.dao.impl.BetStateDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="amountLeftDAO" refId="amountLeftDAOTarget">-->
+<!--		<ehcache:caching cacheName="amountLeftCache"-->
+<!--			methodName="get" />-->
+<!--		<ehcache:flushing cacheNames="amountLeftCache"-->
+<!--			methodName="save" when="after" />-->
+<!--		<ehcache:flushing cacheNames="amountLeftCache"-->
+<!--			methodName="delete" when="after" />-->
+<!--		<ehcache:flushing cacheNames="amountLeftCache"-->
+<!--			methodName="update" when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="amountLeftDAO" class="com.creckett.dao.impl.AmountLeftDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="matchScoreDAO" refId="matchScoreDAOTarget">-->
+<!--		<ehcache:caching cacheName="matchScoreCache"-->
+<!--			methodName="get" />-->
+<!--		<ehcache:caching cacheName="matchScoreCache"-->
+<!--			methodName="getMatchScoreForOvers" />-->
+<!--		<ehcache:caching cacheName="matchScoreCache"-->
+<!--			methodName="getLatestMatchScore" />-->
+<!--		<ehcache:caching cacheName="matchScoreCache"-->
+<!--			methodName="getMatchScore" />-->
+<!--		<ehcache:flushing cacheNames="matchScoreCache"-->
+<!--			methodName="save" when="after" />-->
+<!--		<ehcache:flushing cacheNames="matchScoreCache"-->
+<!--			methodName="delete" when="after" />-->
+<!--		<ehcache:flushing cacheNames="matchScoreCache"-->
+<!--			methodName="update" when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="matchScoreDAO" class="com.creckett.dao.impl.MatchScoreDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="userService" class="com.creckett.service.impl.UserServiceImpl">
+		<property name="userDAO">
+			<ref bean="userDAO" />
+		</property>
+		<property name="userPreferenceService">
+			<ref bean="userPreferenceService"/>
+		</property>
+	</bean>
+	
+	<bean id="userMatchAmountLeftService" class="com.creckett.service.impl.UserMatchAmountLeftServiceImpl">
+		<property name="userDAO">
+			<ref bean="userDAO" />
+		</property>
+		<property name="userMatchAmountLeftDao">
+			<ref bean="userMatchAmountLeftDAO"/>
+		</property>
+		
+		<property name="noOfLastMatchesForBankAsset" value="${noOfLastMatchesForBankAsset}" />
+	</bean>
+
+	<bean id="userDAO" class="com.creckett.dao.impl.UserDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="matchMasterDAO" refId="matchMasterDAOTarget">-->
+<!--		<ehcache:caching cacheName="matchCache" methodName="get" />-->
+<!--		<ehcache:caching cacheName="matchCache" methodName="getListOfUpcomingMatches" />-->
+<!--		<ehcache:flushing cacheNames="matchCache" methodName="save"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="matchCache" methodName="delete"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="matchCache" methodName="update"-->
+<!--			when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="matchMasterDAO" class="com.creckett.dao.impl.MatchMasterDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!--	<ehcache:proxy id="marketDAO" refId="marketDAOTarget">-->
+<!--		<ehcache:caching cacheName="marketCache" methodName="get" />-->
+<!--		<ehcache:flushing cacheNames="marketCache" methodName="save"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="marketCache" methodName="delete"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="marketCache" methodName="update"-->
+<!--			when="after" />-->
+<!--	</ehcache:proxy>-->
+
+	<bean id="marketDAO" class="com.creckett.dao.impl.MarketDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="userMatchAmountLeftDAO" class="com.creckett.dao.impl.UserMatchAmountLeftDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="marketDetailChartService" class="com.creckett.service.impl.MarketDetailChartServiceImpl">
+		<property name="marketDetailChartDAO">
+			<ref bean="marketDetailChartDAO" />
+		</property>
+	</bean>
+	
+	<bean id="marketDetailChartDAO" class="com.creckett.dao.impl.MarketDetailChartDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="teamService" class="com.creckett.service.impl.TeamServiceImpl">
+		<property name="teamDAO">
+			<ref bean="teamDAO" />
+		</property>
+	</bean>
+
+	<bean id="feedbackService" class="com.creckett.service.impl.FeedbackServiceImpl">
+		<property name="feedbackDAO">
+			<ref bean="feedbackDAO" />
+		</property>
+	</bean>
+
+	<bean id="feedbackDAO" class="com.creckett.dao.impl.FeedbackDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="userPreferenceService" class="com.creckett.service.impl.UserPreferenceServiceImpl">
+		<property name="userPreferenceDAO">
+			<ref bean="userPreferenceDAO" />
+		</property>
+	</bean>
+
+	<bean id="userPreferenceDAO" class="com.creckett.dao.impl.UserPreferenceDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="betResultService" class="com.creckett.service.impl.BetResultServiceImpl">
+		<property name="matchService">
+			<ref bean="matchService"/>
+		</property>
+		<property name="marketDetailChartService">
+			<ref bean="marketDetailChartService"/>
+		</property>
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor"/>
+		</property>
+	
+	</bean>
+	
+	<bean id="asyncBetResultHelper" class="com.creckett.service.impl.AsyncBetResultHelper">
+		<property name="betResultService">
+			<ref bean="betResultService"/>
+		</property>
+	
+	</bean>
+	
+	
+	
+<!--	<ehcache:proxy id="teamDAO" refId="teamDAOTarget">-->
+<!--		<ehcache:caching cacheName="teamCache" methodName="get" />-->
+<!--		<ehcache:flushing cacheNames="teamCache" methodName="save"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="teamCache" methodName="delete"-->
+<!--			when="after" />-->
+<!--		<ehcache:flushing cacheNames="teamCache" methodName="update"-->
+<!--			when="after" />-->
+<!--	</ehcache:proxy>-->
+	
+	<bean id="teamDAO" class="com.creckett.dao.impl.TeamDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="userMatchVoteDAO" class="com.creckett.dao.impl.UserMatchVoteDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="adminService" class="com.creckett.service.impl.AdminServiceImpl">
+		<property name="adminDAO">
+			<ref bean="adminDAO" />
+		</property>
+	</bean>
+
+	<bean id="adminDAO" class="com.creckett.dao.impl.AdminDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="archiveService" class="com.creckett.service.impl.ArchiveServiceImpl">
+		<property name="archiveDAO">
+			<ref bean="archiveDAO" />
+		</property>
+		<property name="amountLeftDAO">
+			<ref bean="archivedAmountLeftDAO" />
+		</property>
+	</bean>
+
+	<bean id="archiveDAO" class="com.creckett.dao.impl.ArchiveDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="archivedAmountLeftDAO" class="com.creckett.dao.impl.ArchivedAmountLeftDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="liveMatchScoreService" class="com.creckett.service.impl.LiveMatchScoreServiceImpl">
+		<property name="matchMasterDAO">
+			<ref bean="matchMasterDAO" />
+		</property>
+		<property name="liveMatchScoreDAO">
+			<ref bean="liveMatchScoreDAO" />
+		</property>
+		<property name="creckettLiveMatchScore">
+			<ref bean="creckettLiveMatchScore" />
+		</property>
+		
+	</bean>
+	
+	<bean id="userMatchVoteService" class="com.creckett.service.impl.UserMatchVoteServiceImpl">
+		<property name="userMatchVoteDAO">
+			<ref bean="userMatchVoteDAO" />
+		</property>
+		
+		
+	</bean>
+	
+	<bean id="liveMatchScoreDAO" class="com.creckett.dao.impl.LiveMatchScoreDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="creckettLiveMatchScore" class="com.creckett.config.CreckettLiveMatchScore" factory-method="getInstance">
+	</bean>
+
+ 	<bean id="creckettLogger" class="com.creckett.logger.CreckettLogger" 
+ 		factory-method="getInstance" scope="singleton"> 
+ 		<property name="debugLogger"> 
+ 			<ref bean="debugLogger" /> 
+ 		</property> 
+ 		<property name="errorLogger"> 
+ 			<ref bean="errorLogger" /> 
+ 		</property> 
+ 		<property name="infoLogger"> 
+ 			<ref bean="infoLogger" /> 
+ 		</property> 
+ 	</bean> 
+ 	
+ 	<bean id="debugLogger" class="org.apache.log4j.Logger" 
+ 		factory-method="getLogger"> 
+ 		<constructor-arg type="java.lang.String" value="creckettDebugLog" /> 
+ 	</bean> 
+ 	
+ 	<bean id="errorLogger" class="org.apache.log4j.Logger" 
+ 		factory-method="getLogger"> 
+ 		<constructor-arg type="java.lang.String" value="creckettErrorLog" /> 
+ 	</bean> 
+ 	
+ 	<bean id="infoLogger" class="org.apache.log4j.Logger" 
+ 		factory-method="getLogger"> 
+ 		<constructor-arg type="java.lang.String" value="creckettInfoLog" /> 
+ 	</bean> 
+ 	
+ 	<bean name="codecStrategy" class="com.creckett.core.codec.XstreamCodecStrategy">
+		<property name="marshaller" ref="xmlMarshaller"></property>
+		<property name="unmarshaller" ref="xmlMarshaller"></property>
+	</bean>
+
+	<bean name="xmlMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+	<property name="autodetectAnnotations" value="true"></property>
+		<property name="aliases">
+			<map>
+				<entry key="userBet" value="com.creckett.dto.BetSubmitRequest" />
+				<entry key="ruleConfig" value="com.creckett.core.betresult.RuleConfig"/>
+				<entry key="def" value="com.creckett.core.betresult.RunsDefinition"/>
+				<entry key="user" value="com.creckett.dto.AmountLeft"/>
+			</map>
+
+		</property>
+	</bean>
+	<bean name="freeMarkerCodecStrategy" class="com.creckett.core.codec.FreeMarkerCodecStrategy">
+		<property name="templateLoaderPath" value="freemarker" />
+	</bean>
+	
+	<bean name="virtualUserBetSubmissionStrategy" class="com.creckett.service.bet.VirtualUserBetSubmissionStrategyImpl">
+		<property name="ballNumberToBet" value="${ball.number.for.vu.to.submit.the.bet}"/>
+		<property name="runsForRemainingBalls" value="${runs.from.vu.for.remaining.balls}"/>
+		<property name="messagingAdaptor">
+			<ref bean="messagingAdaptor"/>
+		</property>
+		<property name="matchMasterDAO">
+			<ref bean="matchMasterDAO"/>
+		</property>
+	</bean>
+
+	<!-- <import resource="applicationContext-loadtesting.xml"/> -->
+</beans>
