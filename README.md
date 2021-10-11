@@ -5,8 +5,8 @@ IPL - Indian Premier League, a league in India for Cricket started in 2008. This
 
 As per the initial version of the app which was only accessible through web, a friend would login through Facebook (only authentication available) and invite any of his existing friends to play.
 
-First, he will see a list of all the upcoming matches and then depending upon the match he wish to play - he'd invite his friends. The friend recieves a notification and he/she can join to play afer accepting the challenge.
+First, he will see a list of all the upcoming matches and depending upon the match he wish to play - he'd invite his friends. The friend recieves a notification and he/she can join to play afer accepting the challenge.
 
-When the game airs live, both friends can now bet on how much runs would be scored on that particular over. Both player needs to predict the over score before the third ball is balled by the bowler. Once the over is complete, person who predicts the right score wins some points. They both can predict both runs and wickets. Over time, they accumulate points and player who predicts the most wins the game.
+When the game airs live, both friends can now bet on how much runs would be scored on that particular over. Both player needs to predict the runs scored for a particular over before the third ball is balled by the bowler. Once the over is complete, person who predicts the right score wins some points. They can predict both runs and wickets. Over time, they accumulate points and player who predicts the most wins the game.
 
-The app would poll live feeds and checks the score per over and validates the prediction.
+The app would poll live feeds and check the score per over and validates the prediction.
